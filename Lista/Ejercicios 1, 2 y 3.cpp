@@ -28,7 +28,6 @@ void selection_sort(lista& L) {
 void concatena(lista &L1,lista &L2,lista &L3){
 	L3.insert(L3.end(),L1.begin(),L1.end());
 	L3.insert(L3.end(),L2.begin(),L2.end());
-	
 }
 
 void concatena(list<lista> &L, lista &LL){
@@ -45,7 +44,7 @@ void concatena(list<lista> &L, lista &LL){
 	while(p != L.end()){
 		auto &q = (*p);
 		L.splice(L.end(),q.begin(),q.end())
-			p++;
+		p++;
 	}
 }
 
