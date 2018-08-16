@@ -25,33 +25,30 @@ void selection_sort(lista& L) {
 	}
 }
 
-	///Concatena. Escriba procedimientos para concatenar: a) dos listas L1 y L2 usando insert; b) una
-	///	lista LL de n sublistas usando insert; c) una lista LL de n sublistas usando splice.
-
-	void concatena(lista &L1,lista &L2,lista &L3){
-		L3.insert(L3.end(),L1.begin(),L1.end());
-		L3.insert(L3.end(),L2.begin(),L2.end());
-		
-	}
-
-	void concatena(list<lista> &L, lista &LL){
-		auto p = L.begin();
-		while(p != L.end()){
-			auto &q = (*p);
-			LL.insert(LL.end(),q.begin(),q.end());
-			p++;
-		}
-	}
+void concatena(lista &L1,lista &L2,lista &L3){
+	L3.insert(L3.end(),L1.begin(),L1.end());
+	L3.insert(L3.end(),L2.begin(),L2.end());
 	
-	void concatena(list<lista> &L, lista &LL){
-		auto p = L.begin();
-		while(p != L.end()){
-			auto &q = (*p);
-			L.splice(L.end(),q.begin(),q.end())
-			p++;
-		}
+}
+
+void concatena(list<lista> &L, lista &LL){
+	auto p = L.begin();
+	while(p != L.end()){
+		auto &q = (*p);
+		LL.insert(LL.end(),q.begin(),q.end());
+		p++;
 	}
-	
+}
+
+void concatena(list<lista> &L, lista &LL){
+	auto p = L.begin();
+	while(p != L.end()){
+		auto &q = (*p);
+		L.splice(L.end(),q.begin(),q.end())
+			p++;
+	}
+}
+
 	
 
 
